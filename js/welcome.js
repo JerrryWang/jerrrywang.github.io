@@ -1,18 +1,1 @@
-function welcome(){
-    let welcome_text = '欢迎光顾本大大的小窝~'
-    if(document.referrer!==''){
-        let referrer=document.referrer.split("/")[2];
-        welcome_text="欢迎你，来自"+referrer.toUpperCase()+"的用户！";
-        if(referrer.toUpperCase()==document.domain.toUpperCase())return;
-    }
-    swal({
-        title: " 欢迎！",
-        text: welcome_text+'\n打开页面下方音乐以获得更佳体验！',
-        imageUrl: "/img/avatar.jpg",
-        timer: 3000,
-        showConfirmButton: false
-    });
-}
-$(document).ready(()=>{
-    welcome()
-})
+"use strict";function welcome(){var e="欢迎光顾本大大的小窝~";if(""!==document.referrer){var r=document.referrer.split("/")[2],e="欢迎你，来自"+r.toUpperCase()+"的用户！";if(r.toUpperCase()==document.domain.toUpperCase())return}swal({title:" 欢迎！",text:e+"\n打开页面下方音乐以获得更佳体验！",imageUrl:"/img/avatar.jpg",timer:3e3,showConfirmButton:!1})}$(document).ready(function(){welcome()});
